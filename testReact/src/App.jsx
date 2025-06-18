@@ -1,21 +1,18 @@
-import React from 'react';
-import Article from './components/Article';
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import Articles from "./components/Articles.jsx";
 
-const sampleArticle = {
-  title: "FIFA Club World Cup",
-  content: "Real Madrid Are The Champions",
-  tags: ["Romano", "Guillerm Blague", "La Liga"],
-  date: "2025-06-17T09:00:00Z",
-  author: "Claude"
-};
+
 
 function App() {
-  return (
-    <div>
-      <h1>Breaking News</h1>
-      <Article article={sampleArticle} onTagClick={(tag) => alert(`Tag: ${tag}`)} />
-    </div>
-  );
+return(
+  <>
+  <Articles/>
+  <Header/>
+  <Footer/>
+  </>
+
+ );
 }
 
 export default App;

@@ -1,0 +1,31 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Tags = ({ tags, onTagClick }) => {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {tags.map((tag, index) => (
+        <span
+          key={index}
+          className={`px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full ${
+            onTagClick ? 'cursor-pointer hover:bg-gray-200' : ''
+          }`}
+          onClick={() => onTagClick?.(tag)}
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  );
+};
+
+Tags.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onTagClick: PropTypes.func,
+};
+
+Tags.defaultProps = {
+  onTagClick: null,
+};
+
+export default Tags;
