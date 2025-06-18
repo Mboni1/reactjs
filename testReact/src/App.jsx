@@ -1,15 +1,12 @@
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import Articles from "./components/Articles.jsx";
+import Card from "./components/Card";
 
 
 
 function App() {
 return(
   <>
-  <Articles/>
-  <Header/>
-  <Footer/>
+  <Card/>
+  <Card/>
   </>
 
  );
